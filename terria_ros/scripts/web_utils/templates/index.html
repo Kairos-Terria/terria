@@ -1,0 +1,28 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Display</title>
+</head>
+<body>
+    <h1>Webcam Display</h1>
+    <img src="{{ url_for('video_feed') }}" width="640" height="360">
+
+    <h1>Click a Button to Get User Data:</h1>
+    <form action="/get_data" method="post">
+        <button type="submit" name="button" value="button_start">Start</button>
+        <button type="submit" name="button" value="button_end">End</button>
+        <button type="submit" name="button" value="button_manual">manual</button>
+        <button type="submit" name="button" value="button_auto">auto</button>
+        <button type="submit" name="button" value="button_stop">Stop</button>
+        <button type="submit" name="button" value="button_forward">Forward</button>
+        <button type="submit" name="button" value="button_backward">Backward</button>
+        <button type="submit" name="button" value="button_left">Left</button>
+        <button type="submit" name="button" value="button_right">Right</button>
+    </form>
+
+</body>
+</html>

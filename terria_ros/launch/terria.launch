@@ -1,0 +1,8 @@
+<launch>
+	<node pkg="terria_ros" type="control.py" name="control" output="screen"/>
+	<node pkg="terria_ros" type="img_main.py" name="img_processer" output="screen"/>
+	<node pkg="terria_ros" type="web.py" name="web"/>
+
+	<include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+	<include file="$(find yolov7_ros)/launch/yolov7.launch"/>
+</launch>
