@@ -24,12 +24,18 @@ class Control:
         self.depth_sub = rospy.Subscriber('/front_depth', Int32, self.depth_callback)
 
     def button_callback(self, data):
+        self.button = data.data
+        """
         if data.data == 0:
             self.flag = True
+            self.port.write(str(data.data).encode())
         elif data.data == 1:
             self.flag = False
+            self.port.write(str(self.button).encode())
         else:
             self.button = data.data
+            print(self.button)
+        """
 
     def depth_callback(self, data):
         self.depth = data.data
@@ -43,7 +49,7 @@ class Control:
     def main_loop(self):
         while True:
             if 10 < self.depth < 250:
-                self.port.write(str(3).encode())
+                self.port.write(str(5).encode())
                 time.sleep(1)
                 print('stop')
             else:
@@ -51,7 +57,6 @@ class Control:
                     print(self.button)
                     self.port.write(str(self.button).encode())
                     self.button = None
-
 
 if __name__=='__main__':
     rospy.init_node('control', anonymous=False)

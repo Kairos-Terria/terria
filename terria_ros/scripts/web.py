@@ -34,4 +34,4 @@ if __name__=='__main__':
     rospy.init_node('web', anonymous=False)
 
     my = Control()
-    my.app.run(host='172.30.1.94', port=5000, debug=True)
+    my.app.run(host='172.30.1.36', port=5000, debug=True)
