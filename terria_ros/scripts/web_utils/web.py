@@ -26,7 +26,7 @@ class Button:
 
     def main_loop(self):
         while True:
-            color_img = self.info.get_object_img()
+            color_img = self.info.get_color_img()
     
             if color_img is not None:
                 ret, buffer = cv2.imencode('.jpg', color_img)
