@@ -1,0 +1,9 @@
+../BSP/bsp.c:7:6:Bsp_Led_Show_State_Handle	4	static
+../BSP/bsp.c:20:6:Bsp_Init	8	static
+../BSP/bsp.c:60:6:Bsp_Loop	24	static
+../BSP/bsp.c:158:6:sitdown	24	static
+../BSP/bsp.c:167:6:standup	24	static
+../BSP/bsp.c:176:6:leftdown	24	static
+../BSP/bsp.c:185:6:leftup	24	static
+../BSP/bsp.c:194:6:rightdown	24	static
+../BSP/bsp.c:203:6:rightup	24	static
